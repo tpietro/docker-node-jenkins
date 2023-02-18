@@ -9,4 +9,16 @@ pipeline {
       echo 'starting test stage...'
     }
   }
+  
+  post {
+    always {
+      echo 'in post.always'
+    }
+    success {
+      echo 'in post.success'
+    }
+    failure {
+      echo 'in post.failure'
+    }
+  }
 }
