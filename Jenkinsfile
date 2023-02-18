@@ -6,6 +6,7 @@ pipeline {
       steps {
         echo 'starting build stage...'
         sh(script: 'docker images -a')
+        sh(script: 'docker build --t node-docker .')
       }
     }
     stage('test') {
