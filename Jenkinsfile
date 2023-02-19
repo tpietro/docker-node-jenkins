@@ -6,7 +6,7 @@ pipeline {
       steps {
         echo 'starting build stage...'
         sh(script: 'docker images -a')
-        sh(script: "docker build --tag node-docker:${env.BUILD_ID} .")
+        sh(script: "docker build --tag node-docker:v0.${env.BUILD_ID} .")
       }
     }
     stage('test') {
