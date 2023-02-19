@@ -11,7 +11,7 @@ pipeline {
         echo 'starting build stage...'
         echo "DH $dockerhub_USR $dockerhub_PSW "
         sh(script: 'docker images -a')
-        sh(script: "docker build --tag node-docker:v0.${env.BUILD_ID} . --build-arg USERNAME=$dockerhub_USR --build-arg PASSWORD=dckrTech@8 ")
+        sh(script: "docker build --tag node-docker:v0.${env.BUILD_ID} . --build-arg USERNAME=$dockerhub_USR --build-arg PASSWORD=$dockerhub_PSW ")
         
         
       }
