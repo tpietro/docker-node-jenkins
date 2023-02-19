@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/test', function(req, res) {
-  res.send('Thanks for tesing!');
+  res.send('Thanks for "test"ing!');
 });
 
 var server = app.listen(8000, function() {
