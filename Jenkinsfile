@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'starting build stage...'
+        echo 'starting build stage... "$BUILD_NUMBER" '
         sh(script: 'docker images -a')
         sh(script: 'docker build --tag node-docker .')
       }
