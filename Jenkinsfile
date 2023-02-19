@@ -4,9 +4,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'starting build stage... "$BUILD_NUMBER" '
+        echo 'starting build stage...'
         sh(script: 'docker images -a')
-        sh(script: 'docker build --tag node-docker .')
+        sh(script: "docker build --tag node-docker:${env.BUILD_ID} .")
       }
     }
     stage('test') {
