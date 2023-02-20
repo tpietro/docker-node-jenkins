@@ -14,7 +14,7 @@ pipeline {
         sh(script: 'docker logout')
         sh(script: "docker build --tag node-docker:v0.${env.BUILD_ID} . ")
         /* sh(script: "docker run --rm node-docker:v0.${env.BUILD_ID} ") */
-        sh ‘npm config ls’
+        sh (script: 'npm config ls')
         
         
       }
