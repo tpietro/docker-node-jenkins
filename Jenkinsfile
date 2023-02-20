@@ -10,11 +10,11 @@ pipeline {
       steps {
         echo 'starting build stage...'
         echo "DH $dockerhub_USR $dockerhub_PSW "
-        sh(script: 'docker images -a')
-        sh(script: 'docker logout')
-        sh(script: "docker build --tag node-docker:v0.${env.BUILD_ID} . ")
+        sh 'docker images -a'
+        sh 'docker logout'
+        sh "docker build --tag node-docker:v0.${env.BUILD_ID} . "
         /* sh(script: "docker run --rm node-docker:v0.${env.BUILD_ID} ") */
-        sh (script: 'npm config ls')
+        sh 'npm config ls'
         sh 'node --version'
         
       }
