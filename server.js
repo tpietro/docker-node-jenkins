@@ -1,6 +1,7 @@
 //const ronin = require('ronin-server')
 //const mocks = require('ronin-mocks')
 const express = require('express')
+const calc = require('calculator.js')
 
 //const server = ronin.server()
 
@@ -15,6 +16,10 @@ app.get('/', function(req, res) {
 
 app.get('/test', function(req, res) {
   res.send('Thanks for "test"ing!');
+});
+
+app.get('/add', function(req, res) {
+  res.send(calc.add(1, 1));
 });
 
 var server = app.listen(8000, function() {
