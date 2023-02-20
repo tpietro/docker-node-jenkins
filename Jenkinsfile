@@ -15,7 +15,7 @@ pipeline {
         sh(script: "docker build --tag node-docker:v0.${env.BUILD_ID} . ")
         /* sh(script: "docker run --rm node-docker:v0.${env.BUILD_ID} ") */
         sh (script: 'npm config ls')
-        
+        sh 'node --version'
         
       }
     }
