@@ -1,7 +1,7 @@
 //const ronin = require('ronin-server')
 //const mocks = require('ronin-mocks')
 const express = require('express')
-const calc = require('calculator')
+const calc = require('calculator.js')
 
 //const server = ronin.server()
 
